@@ -1,0 +1,50 @@
+{
+    "schemaVersion": 1,
+    "id": "dragoncurse",
+    "version": "${version}",
+    "name": "Dragoncurse",
+    "description": "An add-on for Trickster which adds radiation as a byproduct to spells",
+    "authors": [
+        "StellarWitch7"
+    ],
+    "contact": {
+        "homepage": "https://github.com/StellarWitch7/dragoncurse",
+        "sources": "https://github.com/StellarWitch7/dragoncurse",
+        "issues": "https://github.com/StellarWitch7/dragoncurse/issues"
+    },
+    "license": "MIT",
+    "icon": "assets/dragoncurse/icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "stellarwitch7.dragoncurse.Dragoncurse"
+        ],
+        "client": [
+            "stellarwitch7.dragoncurse.DragoncurseClient"
+        ],
+        "cardinal-components-world": [
+            "stellarwitch7.dragoncurse.cca.ModWorldComponents"
+        ]
+    },
+    "custom": {
+        "cardinal-components": [
+            "dragoncurse:radiation_sources"
+        ]
+    },
+    "mixins": [
+        "dragoncurse.mixins.json",
+        {
+            "config": "dragoncurse.client.mixins.json",
+            "environment": "client"
+        }
+    ],
+    "depends": {
+        "fabricloader": ">=0.15.0",
+        "minecraft": ">=1.21",
+        "java": ">=21",
+        "fabric-api": "*",
+        "trickster": ">=2.0.0-beta.1"
+    },
+    "breaks": {
+    }
+}
